@@ -8,7 +8,7 @@ configuration from the environment.
 Quickstart
 ----------
 
-```
+```python
 from flask import Flask
 from flask_environ import get, collect, word_for_true
 
