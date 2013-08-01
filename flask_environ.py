@@ -48,7 +48,3 @@ def collect(*dicts):
 
 
 word_for_true = lambda word: word.lower() in ['true', 'yes', 'on' '1']
-
-
-from flask import Flask
-app = Flask(__name__)
