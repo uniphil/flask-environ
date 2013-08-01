@@ -134,7 +134,7 @@ setting.
 >>> del environ['DEBUG']
 >>> get('DEBUG', default=False, convert=word_for_true)
 {'DEBUG': False}
-
+```
 
 
 Patterns
