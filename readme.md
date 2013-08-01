@@ -72,7 +72,7 @@ USER=phil
 HOME=/home/phil
 DISPLAY=:0
 DEBUG=True
-[phil@notdeadyet ~]]$ python
+[phil@notdeadyet ~]$ python
 Python 2.7.5 (default, May 12 2013, 12:00:47) 
 [GCC 4.8.0 20130502 (prerelease)] on linux2
 Type "help", "copyright", "credits" or "license" for more information.
