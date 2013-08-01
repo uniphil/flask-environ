@@ -164,6 +164,7 @@ app.config.update(
     TWITTER_CONSUMER_KEY=environ['TWITTER_CONSUMER_KEY'],
     TWITTER_CONSUMER_SECRETE=environ['TWITTER_CONSUMER_SECRET'],
 )
+```
 
 ```python
 from flask import Flask
