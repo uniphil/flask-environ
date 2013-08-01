@@ -60,7 +60,7 @@ variables come back as strings by default.
 ```
 
 
-#### The 'default' setting
+#### The `default` setting
 
 You can probably guess...
 
@@ -86,7 +86,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 Note that if the default is used, it will _not_ pass through `convert`.
 
 
-#### The 'config_key' setting
+#### The `config_key` setting
 
 Renames the key in the resulting dict.
 
