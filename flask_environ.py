@@ -24,6 +24,9 @@ def get(*env_keys, **settings):
         assert len(env_keys) == 1, 'mapping to a new key only makes sense for'\
             ' a single environment variable. or my imagination failed, sorry.'
 
+    if len(set(env_keys)) != len(env_keys):
+        raise SyntaxError('config key repeated')
+
     for env_key in env_keys:
         try:
             env_string = oenv[env_key]
@@ -43,6 +46,8 @@ def get(*env_keys, **settings):
 def collect(*dicts):
     merged = {}
     for d in dicts:
+        if any(k in merged for k in d):
+            raise SyntaxError('config key repeated')
         merged.update(d)
     return merged
 
