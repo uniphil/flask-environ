@@ -1,6 +1,32 @@
 # -*- coding: utf-8 -*-
 """
-    la la la
+    flask-environ
+    ~~~~~~~~~~~~~
+
+    A tiny wrapper around `os.environ` that provides a concise way of importing
+    configuration from the environment.
+
+    A quick example:
+
+    ```
+
+    from flask import Flask
+    from flask_environ import get, collect, word_for_true
+
+    app = Flask(__name__)
+
+    app.config.update(collect(
+        get('DEBUG', default=False, convert=word_for_true),
+        get('HOST', default='127.0.0.1'),
+        get('PORT', default=5000, convert=int),
+        get('SECRET_KEY',
+            'SQLALCHEMY_DATABASE_URI',
+            'TWITTER_CONSUMER_KEY',
+            'TWITTER_CONSUMER_SECRET',
+        ),
+    ))
+
+    ```
 """
 
 from os import environ as oenv
